@@ -1,8 +1,26 @@
-# React + Vite
+# Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was made using the next technologies:
 
-Currently, two official plugins are available:
+**REACT**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**REACT-BOOTSTRAP**
+
+**VITE**
+
+**TAILWIND**
+
+# Requirements 🔎
+
+Before initialize the project you need to install:
+
+- **Node.js** (version 10 or newer)
+- **NPM** (Node Package Manager)
+
+# Start project ▶️
+
+To run the project you need to use the next command:
+
+npm run dev
+
+This will initialize the server and you can access the app in your browser with this URL: `http://localhost:5173`. 
