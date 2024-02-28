@@ -1,0 +1,19 @@
+.container{
+    margin-left: 24px;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: rgb(51, 51, 51);
+    border-radius: 5px;
+    padding: 15px;
+    border-color: white;
+    border-width: 0.1em;
+}
+
+.text{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
