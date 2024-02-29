@@ -75,6 +75,11 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
                     color: '#fff',
                     textDecoration: 'none',
                 }}>Mi perfil</Link>
+                <Link to="/cart/" style={{
+                    marginLeft: 24,
+                    color: '#fff',
+                    textDecoration: 'none',
+                }}>🛒</Link>
             </div>
         </div>
     );

@@ -1,18 +1,27 @@
-import { useRef, useMemo } from 'react'
+import { useRef, useState } from 'react'
 import { Producto } from '../../components/principal/index.jsx'
 
 import Navbar from '../../components/Navbar'
 import styles from './Home.module.css';
 
-const Home = () => {
+const Home = ({ searchTerm, events }) => {
+
     const containerRef = useRef();
+    //TODO FIX SEARCH BAR
+    const [setSearchTerm] = useState('')
 
     const handleNavbarSearch = (term) => {
         setSearchTerm(term);
         fetchEvents(`&keyword = ${term}`);
     };
 
+    //Filter events - searchBar
     const renderEvents = () => {
+        let eventsFiltered = events;
+
+        if (searchTerm) {
+            eventsFiltered = eventsFiltered.filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        }
 
         return (
             <div className={styles.container}>
@@ -22,15 +31,16 @@ const Home = () => {
         
             </div>
         );
-    };
+    }; 
 
-    //Loading or show events or error
     return (
-        <>
+        <div>
             <Navbar onSearch={handleNavbarSearch} ref={containerRef} />
             {renderEvents()}
-        </>
-    )
+        </div>
+    );
 };
 
 export default Home;
+
+
