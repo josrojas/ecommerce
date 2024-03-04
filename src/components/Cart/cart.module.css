@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;    
+    margin-top: 50px;
+}
+
+.containerProducts{   
+    text-align: start;
+    background-color: #a1a1a1;
+    color: #000;
+    border-radius: 20px;
+}
+
+.titulo,
+.precio,
+.cantidad{
+    padding-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttonAdd{
+    background-color: #a1a1a1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.buttonAdd:hover{
+    background-color: #979797;
+}
+
+.buttonDel{
+    margin-left: 50px;
+    width: 10%;
+    background-color: #636363;
+}
+
+.buttonDel:hover{
+    color: #ff0000;
+}

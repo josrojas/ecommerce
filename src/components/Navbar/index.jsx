@@ -72,12 +72,10 @@ const Navbar = forwardRef(({ onSearch }, ref) => {
                 <BasicButtonExample />
                 <Link to="/profile/" style={{
                     marginLeft: 24,
-                    color: '#fff',
                     textDecoration: 'none',
                 }}>Mi perfil</Link>
-                <Link to="/cart/" style={{
+                <Link to="/shop/" style={{
                     marginLeft: 24,
-                    color: '#fff',
                     textDecoration: 'none',
                 }}>🛒</Link>
             </div>

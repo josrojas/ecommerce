@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../principal/cart.module.css'
+import styles from '../principal/princ.module.css'
 
 
 export class Producto extends React.Component {

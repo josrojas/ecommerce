@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 import Home from "../views/home"
 import Error404 from "../views/Error404"
-import Cart from "../views/Cart"
+import Shop from "../views/Shop"
 import Profile from "../views/Profile"
 import Procesador from "../views/Procesador"
 import Grafica from "../views/Grafica"
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         errorElement: <Error404 />
     },
     {
-        path: '/cart',
-        element: <Cart />,
+        path: '/shop',
+        element: <Shop />,
         errorElement: <Error404 />
     },
     {

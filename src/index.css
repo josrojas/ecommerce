@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #1f9ee7;
+  color: #fff;
   text-decoration: inherit;
 }
 
@@ -42,7 +42,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #313131;
   cursor: pointer;
   transition: border-color 0.25s;
 }
