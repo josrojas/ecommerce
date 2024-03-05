@@ -1,39 +1,41 @@
 import React from 'react'
 import styles from '../Cart/cart.module.css'
 
-import { Producto } from '../../components/principal/index.jsx'
+export class Producto extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { cantidad: 0 };
+    }
 
-const Shop = ({ searchTerm, events }) =>{
-    const containerRef = useRef();
-    //TODO FIX SEARCH BAR
-    const [setSearchTerm] = useState('')
+    agregarAlCarrito = () => {
+        this.setState(prevState => {
+            return { cantidad: prevState.cantidad + 1 }
+        });
+    }
 
-    const handleNavbarSearch = (term) => {
-        setSearchTerm(term);
-        fetchEvents(`&keyword = ${term}`);
-    };
+    eliminarDelCarrito = () => {
+        this.setState(prevState => {
+            if (prevState.cantidad > 0) {
+                return { cantidad: prevState.cantidad - 1 };
+            }
+        });
+    }
 
-    //Filter events - searchBar
-    const renderEvents = () => {
-        let eventsFiltered = events;
 
-        if (searchTerm) {
-            eventsFiltered = eventsFiltered.filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
-        }
-
+    render() {
         return (
             <div className={styles.container}>
-              <Producto />        
+                <div className={styles.containerProducts}>
+                    <h2 className={styles.titulo}>{this.props.nombre}</h2>
+                    <h5 className={styles.precio}>Precio: ${this.props.precio}</h5>
+                    <h5 className={styles.cantidad}>Cantidad en el carrito: 
+                        <button onClick={this.agregarAlCarrito} className={styles.buttonAdd}>{this.state.cantidad}</button>
+                        <button onClick={this.eliminarDelCarrito} className={styles.buttonDel}>X</button></h5>
+
+
+
+                </div>
             </div>
         );
-    }; 
-
-    return (
-        <div>
-            <Navbar onSearch={handleNavbarSearch} ref={containerRef} />
-            {renderEvents()}
-        </div>
-    );
-};
-
-export default Shop;
+    }
+}

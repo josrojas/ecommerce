@@ -1,4 +1,4 @@
-import { useRef, useMemo } from 'react'
+import { useRef } from 'react'
 import { Producto } from '../../components/Productos/index.jsx'
 
 import Navbar from '../../components/Navbar'

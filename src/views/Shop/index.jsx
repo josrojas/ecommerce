@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { Producto } from '../../components/principal/index.jsx'
+import { Producto } from '../../components/Cart/index.jsx'
 
 import Navbar from '../../components/Navbar/index.jsx'
 import styles from './shop.module.css'
@@ -24,7 +24,7 @@ const Shop = ({ searchTerm, events }) =>{
 
         return (
             <div className={styles.container}>
-              <Producto />        
+              <Producto nombre="Ram Crucial 2x8" descripcion="Ram 16GB DDR4 3200MHz CL22" precio="36,99"/>        
             </div>
         );
     }; 
